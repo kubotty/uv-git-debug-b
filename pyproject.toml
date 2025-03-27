@@ -1,0 +1,16 @@
+[project]
+name = "uv-git-debug-b"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "uv-git-debug-a",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+uv-git-debug-a = { git = "https://github.com/kubotty/uv-git-debug-a.git", tag = "0.1.0" }
