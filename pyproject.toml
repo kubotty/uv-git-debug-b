@@ -9,8 +9,16 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"uv_git_debug_b" = [
+    "py.typed",
+]
 
 [tool.uv.sources]
 uv-git-debug-a = { git = "https://github.com/kubotty/uv-git-debug-a.git", tag = "0.1.0" }
